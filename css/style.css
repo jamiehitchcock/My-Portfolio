@@ -40,7 +40,7 @@ a{
     height: 100%;
     width: 100%;
     background-color:black;
-    opacity: 0.7;
+    opacity: 0.6;
     z-index: -1;
 }
 /* positioning of welcome text */
@@ -100,6 +100,7 @@ a{
     /* color: crimson; */
     color: white;
     border: 2px solid crimson;
+    /* border-radius: 20px; */
     background-color: transparent;
     font-size: 2rem;
     /* text-transform: uppercase; */
@@ -113,6 +114,64 @@ a{
     background-color: crimson;
     /* border: 2px solid white; */
 }
+/* end of hero section */
+
+/* skills section */
+#skills{
+
+}
+#skills .skills{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#skills .section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    /* text-transform: uppercase; */
+    color: black;
+    margin-bottom: 10px;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+#skills .section-title span{
+    color: crimson;
+}
+#skills .skills-upper p{
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+}
+#skills .skills-lower{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#skills .skills-item{
+    display: flex;
+    flex-direction: column;
+
+    /* reduce size down to 40% ? and have 8 items total */
+    
+    /* initial size of items*/
+    flex-basis: 80%;
+
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 5%;
+    padding: 30px;
+    /* background-image: url();
+    background-size: cover; */
+    border: 2px solid crimson;
+    border-radius: 10px;    
+}
+/* end of skills section */
+
 
 /* Keyframes */
 @keyframes text-reveal-box{
