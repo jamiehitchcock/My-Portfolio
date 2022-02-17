@@ -151,16 +151,17 @@ a{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
+}
+/* to divide the skills section into 2 rows */
+#skills .skills-flex{
+    display: flex;
+    flex-direction: row;
 }
 #skills .skills-item{
     display: flex;
-    flex-direction: column;
-
-    /* reduce size down to 40% ? and have 8 items total */
-    
-    /* initial size of items*/
+    flex-direction: column;    
     flex-basis: 80%;
-
     align-items: flex-start;
     justify-content: center;
     margin: 10px 5%;
