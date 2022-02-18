@@ -20,6 +20,8 @@ a{
 }
 h2{
     font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
     color: white;
     /* text-transform: uppercase; */
 }
@@ -45,6 +47,27 @@ p{
 }
 .section-title span{
     color: crimson;
+}
+/* button */
+.cta{
+    display: inline-block;
+    padding: 10px 30px;
+    /* color: crimson; */
+    color: white;
+    border: 2px solid crimson;
+    /* border-radius: 20px; */
+    background-color: transparent;
+    font-size: 2rem;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.1rem;
+    margin-top: 30px;
+    transition: 0.3s ease;
+    transition-property: background-color, color;
+}
+.cta:hover{
+    color: white;
+    background-color: crimson;
+    /* border: 2px solid white; */
 }
 
 /* hero section */
@@ -122,28 +145,61 @@ p{
 #hero h1:nth-child(3) span{
     animation-delay: 3s;
 }
-/* button in hero section */
-#hero .cta{
-    display: inline-block;
-    padding: 10px 30px;
-    /* color: crimson; */
-    color: white;
-    border: 2px solid crimson;
-    /* border-radius: 20px; */
-    background-color: transparent;
-    font-size: 2rem;
-    /* text-transform: uppercase; */
-    letter-spacing: 0.1rem;
-    margin-top: 30px;
-    transition: 0.3s ease;
-    transition-property: background-color, color;
+/* end of hero section */
+
+/* about me section */
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    /* padding: 50px 0; */
+    padding: 50px 20px;
 }
-#hero .cta:hover{
+#about .col-left{
+    width: 250px;
+    height: 360px;
+}
+/* sets about image above the box effect*/
+#about .col-left .about-img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 10px solid;
+    border-color: white;
+}
+/* box effect on about image*/
+#about .col-left .about-img::after{
+    content: "";
+    position: absolute;
+    left: -33px; 
+     top: 22px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid crimson;
+    /* background: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(95,0,204,1) 100%); */
+    z-index: -1;
+}
+#about .col-right{
+    width: 100%;
+}
+#about .col-right h2{
+    color: black;
+    margin-bottom: 10px;
+}
+#about .col-right p{
+    margin-bottom: 10px;
+}
+#about .cta{
+    color: black;
+    margin-bottom: 50px;
+}
+#about .cta:hover{
     color: white;
     background-color: crimson;
     /* border: 2px solid white; */
 }
-/* end of hero section */
+/* end of about me section */
 
 /* skills section */
 #skills .skills{
