@@ -148,6 +148,13 @@ p{
 /* end of hero section */
 
 /* about me section */
+
+
+
+
+/* rename col left and right to upper and lower */
+
+
 #about .about{
     flex-direction: column-reverse;
     text-align: center;
