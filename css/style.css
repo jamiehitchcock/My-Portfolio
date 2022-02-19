@@ -222,7 +222,7 @@ p{
 /* to divide the skills section into 2 rows */
 #skills .skills-flex{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 #skills .skills-item{
     display: flex;
@@ -236,10 +236,16 @@ p{
     background-size: cover; */
     border: 2px solid crimson;
     border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px crimson;
+    transition: 0.3s ease box-shadow;
     /* sets text above the colour effect of card */
     position: relative;
     z-index: 1;
     overflow: hidden;
+}
+#skills .skills-item:hover{
+    box-shadow: 0px 0px 5px 0px crimson;
+    cursor: pointer;
 }
 
 /* make icons grey and add colour on hover */
@@ -457,3 +463,85 @@ footer .social-icon{
     }
 }
 /* end of keyframes */
+
+/* media queries for tablet */
+@media only screen and (min-width: 768px){
+    .cta{
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+    h1.section-title{
+        font-size: 6rem;
+    }
+    /* hero */
+    #hero h1{
+        font-size: 7rem;
+    }
+    /* end of hero section*/
+
+    /* about me section */
+    #about .about{
+        /* flex-direction: row-reverse; */
+    }
+    #about .about-upper{
+        /* text-align: left; */
+        padding: 30px;
+    }
+
+
+    /* align about headers left without changing all other headers  */
+    /* #about .about-upper h1, h2{
+        text-align: left;
+    } */
+
+
+
+    #about .about-upper p{
+        margin: 5px 0px;
+    }
+    #about .about-lower{
+        width: 600px;
+        height: 600px;
+        padding-left: 60px;
+    }
+    #about .about-lower .about-img::after{
+        left: -45px;
+        top: 34px;
+        height: 98%;
+        width: 98%;
+        border: 10px solid crimson;
+    }
+    /* end of about me section */
+
+    /* skills section */
+    #skills .skills-lower .skills-item{
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+    #skills .skills-flex{
+        flex-direction: row;
+    }
+    /* end of skills section */
+    
+    /* portfolio section  */
+    #portfolio .portfolio-item{
+        flex-direction: row;
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    /* alternates every other project */
+    #portfolio .portfolio-item:nth-child(even){
+        flex-direction: row-reverse;
+    }
+    #portfolio .portfolio-lower .portfolio-info{
+        height: 100%;
+    }
+    #portfolio .portfolio-item .portfolio-img{
+        height: 100%;
+    }
+    /* end of portfolio section */
+    contact section
+}
+/* end of media queries for tablet */
