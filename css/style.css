@@ -148,26 +148,19 @@ p{
 /* end of hero section */
 
 /* about me section */
-
-
-
-
-/* rename col left and right to upper and lower */
-
-
 #about .about{
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
     max-width: 1500px;
     margin: 0 auto;
     padding: 50px 0px;
 }
-#about .col-left{
+#about .about-lower{
     width: 250px;
     height: 360px;
 }
 /* sets about image above the box effect*/
-#about .col-left .about-img{
+#about .about-lower .about-img{
     position: relative;
     height: 100%;
     width: 100%;
@@ -175,7 +168,7 @@ p{
     border-color: white;
 }
 /* box effect on about image*/
-#about .col-left .about-img::after{
+#about .about-lower .about-img::after{
     content: "";
     position: absolute;
     left: -33px; 
@@ -189,14 +182,6 @@ p{
 #about .about-upper{
     width: 100%;
 }
-
-
-/* check spacing and margin etc on about h2 and p  */
-
-
-/* #about .about-upper h2{
-    margin-bottom: 10px;
-} */
 #about .about-upper p{
     color: black;
     margin: 5px 60px;
@@ -245,10 +230,7 @@ p{
     flex-basis: 60%;
     align-items: center;
     justify-content: center;
-
-    /* adjust margin  and compare with portfolio section*/
     margin: 10px 5%;
-
     padding: 30px;
     /* background-image: url();
     background-size: cover; */
@@ -259,6 +241,16 @@ p{
     z-index: 1;
     overflow: hidden;
 }
+
+/* make icons grey and add colour on hover */
+/* #skills .skills-item img{
+    filter: grayscale(1);
+    transition: 0.5s ease filter;
+}
+#skills .skills-item img:hover{
+    filter: grayscale(0);
+} */
+
 /* colour effect on skills cards for background image*/
 #skills .skills-item::after{
     content: "";
@@ -325,9 +317,6 @@ p{
     color: white;
     padding: 30px;
 }
-
-/* check sizing of fonts compared with skills section, portfolio and hero */
-
 #portfolio .portfolio-info h1{
     font-size: 4rem;
     font-weight: 500;
@@ -363,10 +352,6 @@ p{
 /* end of portfolio section */
 
 /* contact me section */
-
-
-/* fix alignment of h1 h2, p and contact items */
-
 #contact .contact{
     flex-direction: column;
     text-align: center;    
@@ -382,6 +367,10 @@ p{
 #contact .contact-lower{
     width: 100%%;
 }
+/* stop colour of link changing after click */
+#contact a{
+    color: black;
+}
 #contact .contact-item{
     width: 80%;
     text-align: center;
@@ -394,23 +383,58 @@ p{
     margin: 30px;
     padding: 30px;
     box-shadow: 0px 0px 20px 0px crimson;
+    transition: 0.3s ease box-shadow;
+}
+#contact .contact-item:hover{
+    box-shadow: 0px 0px 5px 0px crimson;
+    cursor: pointer;
 }
 #contact .contact-info h2{
-    font-size: 2.3rem;
-    font-weight: 500;
     margin-bottom: 5px;
 }
-#contact .contact-info p{
-    font-size: 1.3rem;
-    line-height: 2rem;
-    font-weight: 500;
-}
 #contact .icon{
-    width: 70px;
+    width: 60px;
+    height: 60px;
     margin: 0 auto;
     margin-bottom: 10px;
 }
 /* end of contact me section */
+
+/* footer section */
+#footer{
+    background: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(95,0,204,1) 100%);
+}
+#footer .footer{
+    min-height: 150px;
+    flex-direction: column;
+}
+#footer h1{
+    color: white;
+    font-size: 3rem;
+}
+#footer h2{
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem
+}
+footer .social-icon{
+    display: flex;
+}
+#footer .social-item{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+/* make icons grey and add colour on hover */
+#footer .social-item img{
+    filter: grayscale(1);
+    transition: 0.5s ease filter;
+}
+#footer .social-item img:hover{
+    filter: grayscale(0);
+}
+/* end of footer section */
 
 /* Keyframes */
 @keyframes text-reveal-box{
