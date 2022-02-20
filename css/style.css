@@ -87,9 +87,20 @@ p{
     width: 100vw;
     height: auto;
 }
+
+
+/* correct header to change color on scroll y position*/
+/* currently not changing colour but is recognising scroll  */
+
+
+
+
+
+
 #header .header{
     min-height: 5vh;
-    background-color:rgba(0,0,0,0.05);
+    background-color: rgba(31, 30, 30, 0.24);
+    transition: 0.3s ease background-color;
 }
 #header .nav-bar{
     display: flex;
@@ -97,7 +108,8 @@ p{
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    max-width: 1300px;
+    /* max-width: 1300px; */
+    max-width: 100vw;
     padding: 10px 30px;
 }
 #header .nav-list ul{
@@ -143,6 +155,9 @@ p{
     z-index: -1;
     transition: 0.3s ease letter-spacing;
     transition: 0.3s ease font-size;
+}
+#header .nav-list ul li:hover a{
+    color: crimson;
 }
 #header .nav-list ul li:hover a::after{
     /* applies the background word effect on hover */
@@ -733,6 +748,28 @@ footer .social-icon{
 
 /* larger screens */
 @media only screen and (min-width: 1350px){
+    /* header section  */
+    #header .hamburger{
+        display: none;
+    }
+    #header .nav-list ul{
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #header .nav-list ul li{
+        display: inline-block;
+    }
+    #header .nav-list ul li a{
+        font-size: 1.8rem;
+    }
+    /* remove background word effect */
+    #header .nav-list ul a::after{
+        display: none;
+    }
+    /* end of header section */
     #skills .skills-flex .skills-flex-pair{
         flex-direction: row;
     }
