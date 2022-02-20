@@ -98,7 +98,7 @@ p{
     width: 100%;
     height: 100%;
     max-width: 1300px;
-    padding: 0 30px;
+    padding: 10px 30px;
 }
 #header .nav-list ul{
     overflow: hidden;
@@ -163,6 +163,17 @@ p{
     z-index: 100;
     cursor: pointer;
     transform: scale(0.8);
+    margin-right: 10px;
+}
+/* hamburger pusle effect */
+#header .hamburger::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    border: 3px solid crimson;
+    border-radius: 50%;
+    animation: hamburger-pulse 3s ease infinite;
 }
 #header .hamburger .bar{
     height: 2.5px;
@@ -194,13 +205,6 @@ p{
     bottom: 0;
 }
 /* end of header section */
-
-
-
-
-
-
-
 
 /* hero section */
 #hero{
@@ -594,6 +598,16 @@ footer .social-icon{
 /* end of footer section */
 
 /* Keyframes */
+@keyframes hamburger-pulse{
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(2);
+    }
+}
 @keyframes text-reveal-box{
     50%{
         width: 100%;
