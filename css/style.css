@@ -224,6 +224,12 @@ p{
     display: flex;
     flex-direction: column;
 }
+
+/* RESPONSIVE NEEDED !
+break skills lower into multiple smaller divs and change flex direction on breakpoints */
+/* ie div of two rather than 4 skills in one */
+
+
 #skills .skills-item{
     display: flex;
     flex-direction: column;    
@@ -237,26 +243,28 @@ p{
     border: 2px solid crimson;
     border-radius: 10px;
     box-shadow: 0px 0px 20px 0px crimson;
-    transition: 0.3s ease box-shadow;
+    transition: 0.5s ease box-shadow;
     /* sets text above the colour effect of card */
     position: relative;
     z-index: 1;
     overflow: hidden;
 }
+/* reduce box shadow on hover */
 #skills .skills-item:hover{
     box-shadow: 0px 0px 5px 0px crimson;
-    cursor: pointer;
 }
-
-/* make icons grey and add colour on hover */
-/* #skills .skills-item img{
+/* make all skills grey when one is hovered on */
+#skills .skills-lower:hover img{
     filter: grayscale(1);
     transition: 0.5s ease filter;
 }
-#skills .skills-item img:hover{
+/* add colour only to the skill that is hovered on, all others remain grey */
+#skills .skills-item:hover img{
     filter: grayscale(0);
-} */
-
+}
+#skills .skills-item img{
+    transition: 0.5s ease filter;
+}
 /* colour effect on skills cards for background image*/
 #skills .skills-item::after{
     content: "";
@@ -390,11 +398,23 @@ p{
     margin: 30px;
     padding: 30px;
     box-shadow: 0px 0px 20px 0px crimson;
-    transition: 0.3s ease box-shadow;
+    transition: 0.5s ease box-shadow;
 }
 #contact .contact-item:hover{
     box-shadow: 0px 0px 5px 0px crimson;
     cursor: pointer;
+}
+/* make all contact icons grey when one is hovered on */
+#contact .contact-lower:hover img{
+    filter: grayscale(1);
+    transition: 0.5s ease filter;
+}
+/* add colour only to the contact icon that is hovered on, all others remain grey */
+#contact .contact-item:hover img{
+    filter: grayscale(0);
+}
+#contact .contact-item img{
+    transition: 0.5s ease filter;
 }
 #contact .contact-info h2{
     margin-bottom: 5px;
