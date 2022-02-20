@@ -224,12 +224,10 @@ p{
     display: flex;
     flex-direction: column;
 }
-
-/* RESPONSIVE NEEDED !
-break skills lower into multiple smaller divs and change flex direction on breakpoints */
-/* ie div of two rather than 4 skills in one */
-
-
+#skills .skills-flex-pair{
+    display: flex;
+    flex-direction: column;
+}
 #skills .skills-item{
     display: flex;
     flex-direction: column;    
@@ -582,3 +580,11 @@ footer .social-icon{
     /* end of contact section */
 }
 /* end of media queries for tablet */
+
+/* larger screens */
+@media only screen and (min-width: 1350px){
+    #skills .skills-flex .skills-flex-pair{
+        flex-direction: row;
+    }
+}
+/* end of larger screens */
