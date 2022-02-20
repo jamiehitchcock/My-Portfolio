@@ -299,6 +299,7 @@ p{
     align-items: center;
     justify-content: center;
     text-align: left;
+    margin-top: 50px;
 }
 #portfolio .portfolio-item{
     display: flex;
@@ -480,24 +481,13 @@ footer .social-icon{
     /* end of hero section*/
 
     /* about me section */
-    #about .about{
-        /* flex-direction: row-reverse; */
-    }
+
     #about .about-upper{
-        /* text-align: left; */
         padding: 30px;
     }
 
-
-    /* align about headers left without changing all other headers  */
-    /* #about .about-upper h1, h2{
-        text-align: left;
-    } */
-
-
-
     #about .about-upper p{
-        margin: 5px 0px;
+        margin: 5px 10px;
     }
     #about .about-lower{
         width: 600px;
@@ -524,6 +514,9 @@ footer .social-icon{
     /* end of skills section */
     
     /* portfolio section  */
+    #portfolio .portfolio-lower{
+        margin: 0 40px;
+    }
     #portfolio .portfolio-item{
         flex-direction: row;
         height: 400px;
@@ -542,6 +535,30 @@ footer .social-icon{
         height: 100%;
     }
     /* end of portfolio section */
-    contact section
+    
+    /* contact section  */
+    #contact .contact{
+        flex-direction: column;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: center;
+        min-height: 20vh;
+    }
+    #contact .contact-lower{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+    #contact .contact-item{
+        margin: 20px;
+        flex-direction: row;
+    }
+    #contact .contact-item .icon{
+        height: 80px;
+        width: 80px;
+    }
+    /* end of contact section */
 }
 /* end of media queries for tablet */
