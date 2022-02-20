@@ -565,6 +565,7 @@ footer .social-icon{
     #contact .contact-lower{
         display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
         width: 100%;
         padding: 20px;
         margin: 0;
@@ -572,6 +573,7 @@ footer .social-icon{
     #contact .contact-item{
         margin: 20px;
         flex-direction: row;
+        max-width: 290px;
     }
     #contact .contact-item .icon{
         height: 80px;
