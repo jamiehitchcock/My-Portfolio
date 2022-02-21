@@ -4,9 +4,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --black:#000000;
+    --white:#FFFFFF;
+    --purple:#8D4DDD;
+  }
 html{
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    /* background-color: var(--black); */
 }
 a{
     text-decoration: none;
@@ -46,7 +55,7 @@ p{
     text-align: center;
 }
 .section-title span{
-    color: crimson;
+    color: var(--purple);
 }
 /* button */
 .cta{
@@ -54,7 +63,7 @@ p{
     padding: 10px 30px;
     /* color: crimson; */
     color: white;
-    border: 2px solid crimson;
+    border: 2px solid var(--purple);
     /* border-radius: 20px; */
     background-color: transparent;
     font-size: 2rem;
@@ -66,7 +75,7 @@ p{
 }
 .cta:hover{
     color: white;
-    background-color: crimson;
+    background-color: var(--purple);
     /* border: 2px solid white; */
 }
 .brand h1 {
@@ -75,7 +84,7 @@ p{
 	color: white;
 }
 .brand h1 span {
-	color: crimson;
+	color: var(--purple);
 }
 
 /* header section */
@@ -99,9 +108,11 @@ p{
 
 #header .header{
     min-height: 5vh;
-    background-color: rgba(31, 30, 30, 0.24);
+    background-color: rgba(31, 30, 30, 0.25);
+    /* background-color: var(--black); */
     transition: 0.3s ease background-color;
 }
+
 #header .nav-bar{
     display: flex;
     align-items: center;
@@ -149,7 +160,7 @@ p{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%) scale(0);
-    color: crimson;
+    color: var(--purple);
     font-size: 15rem;
     letter-spacing: 50px;
     z-index: -1;
@@ -157,7 +168,7 @@ p{
     transition: 0.3s ease font-size;
 }
 #header .nav-list ul li:hover a{
-    color: crimson;
+    color: var(--purple);
 }
 #header .nav-list ul li:hover a::after{
     /* applies the background word effect on hover */
@@ -169,7 +180,7 @@ p{
     height: 60px;
     width: 60px;
     display: inline-block;
-    border: 5px solid crimson;
+    border: 5px solid var(--purple);
     border-radius: 50%;
     position: relative;
     display: flex;
@@ -186,7 +197,7 @@ p{
     content: "";
     height: 100%;
     width: 100%;
-    border: 3px solid crimson;
+    border: 3px solid var(--purple);
     border-radius: 50%;
     animation: hamburger-pulse 3s ease infinite;
 }
@@ -194,7 +205,7 @@ p{
     height: 2.5px;
     width: 30px;
     position: relative;
-    background-color:crimson;
+    background-color:var(--purple);
 }
 #header .hamburger .bar::before,
 #header .hamburger .bar::after{
@@ -203,7 +214,7 @@ p{
     height: 100%;
     width: 100%;
     left: 0;
-    background-color: crimson;
+    background-color: var(--purple);
     transition: 0.5s ease;
     transition-property: top, bottom;
 }
@@ -228,8 +239,8 @@ p{
     background-position: top center;
 
     /* clamp background to stop zooming too much */
-    /* background-size: clamp(1500px, 70%, 3000px) auto;
-    background-repeat: no-repeat; */
+    background-size: clamp(1200px, 80%, 2500px) auto;
+    /* background-repeat: no-repeat; */
 
     position: relative;
     z-index: 1;
@@ -282,7 +293,7 @@ p{
     left: 0;
     height: 100%;
     width: 0%;
-    background-color: crimson;
+    background-color: var(--purple);
     animation: text-reveal-box 1s ease;
     animation-delay: 1s;
 }
@@ -326,7 +337,7 @@ p{
      top: 22px;
     height: 98%;
     width: 98%;
-    border: 7px solid crimson;
+    border: 7px solid var(--purple);
     /* background: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(95,0,204,1) 100%); */
     z-index: -1;
 }
@@ -344,7 +355,6 @@ p{
 }
 #about .cta:hover{
     color: white;
-    background-color: crimson;
     /* border: 2px solid white; */
 }
 /* end of about me section */
@@ -354,6 +364,17 @@ p{
     flex-direction: column;
     text-align: center;
     max-width: 1500px;
+
+
+
+    
+
+    /* add margin top to all headers so that they align below the navbar when clicking the nav links. */
+
+
+
+
+
     margin: 0 auto;
     padding: 50px 0;
 }
@@ -389,18 +410,29 @@ p{
     padding: 30px;
     /* background-image: url();
     background-size: cover; */
-    border: 2px solid crimson;
+    border: 2px solid var(--purple);
     border-radius: 10px;
-    box-shadow: 0px 0px 20px 0px crimson;
+    box-shadow: 0px 0px 20px 0px var(--purple);
     transition: 0.5s ease box-shadow;
     /* sets text above the colour effect of card */
     position: relative;
     z-index: 1;
     overflow: hidden;
 }
+
+
+
+/* add transitions to ease purple background color on all hover items: Skills portfolio and contact */
+
+
+
+
+
+
 /* reduce box shadow on hover */
 #skills .skills-item:hover{
-    box-shadow: 0px 0px 5px 0px crimson;
+    box-shadow: 0px 0px 5px 0px var(--purple);
+    background-color: var(--purple);
 }
 /* make all skills grey when one is hovered on */
 #skills .skills-lower:hover img{
@@ -464,7 +496,7 @@ p{
     align-items: center;
     justify-content: center;
     width: 90%;
-    border: 2px solid crimson;
+    border: 2px solid var(--purple);
     border-radius: 10px;
     margin: 20px auto;
     overflow: hidden;
@@ -531,10 +563,6 @@ p{
 #contact .contact-lower{
     width: 100%%;
 }
-/* stop colour of link changing after click */
-#contact a{
-    color: black;
-}
 #contact .contact-item{
     width: 80%;
     text-align: center;
@@ -542,15 +570,38 @@ p{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid crimson;
+    border: 2px solid var(--purple);
     border-radius: 10px;
     margin: 30px;
     padding: 30px;
-    box-shadow: 0px 0px 20px 0px crimson;
+    box-shadow: 0px 0px 20px 0px var(--purple);
     transition: 0.5s ease box-shadow;
+    position: relative;
+    z-index: 1;
+}
+#contact .contact-item h2, #contact .contact-item h2,p{
+    color: var(--white);
+}
+/* stop colour of link changing after click */
+#contact a{
+    color: black;
+}
+/* colour effect on contact cards for background image*/
+#contact .contact-item::after{
+    content: "";
+    position: absolute;
+    left: 0; 
+     top: 0;
+    height: 100%;
+    width: 100%;
+    /* background-color: black; */
+    background: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(95,0,204,1) 100%);
+    opacity: 0.8;
+    z-index: -1;
 }
 #contact .contact-item:hover{
-    box-shadow: 0px 0px 5px 0px crimson;
+    box-shadow: 0px 0px 5px 0px var(--purple);
+    background-color: var(--purple);
     cursor: pointer;
 }
 /* make all contact icons grey when one is hovered on */
@@ -639,7 +690,7 @@ footer .social-icon{
 }
 @keyframes text-reveal-alt{
     100%{
-        color: crimson;
+        color: var(--purple);
     }
 }
 /* end of keyframes */
@@ -677,7 +728,7 @@ footer .social-icon{
         top: 34px;
         height: 98%;
         width: 98%;
-        border: 10px solid crimson;
+        border: 10px solid var(--purple);
     }
     /* end of about me section */
 
