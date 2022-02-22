@@ -2,7 +2,6 @@
 const hamburger = document.querySelector(".header .nav-bar .nav-list .hamburger");
 const mobileMeunu = document.querySelector(".header .nav-bar .nav-list ul");
 const menuItem = document.querySelectorAll(".header .nav-bar .nav-list ul li a");
-const header = document.querySelector(".header.container");
 
 // toggle hamburger and mobile menu on clicking icon
 hamburger.addEventListener("click", () => {
@@ -18,12 +17,30 @@ menuItem.forEach((item) => {
 	});
 });
 
-// change colour of header upon scrolling in y position
-document.addEventListener("scroll", () => {
-    let scrollPosition = window.scrollY;
-    if (scrollPosition > 250){
-        header.style.backgroundColor = "29323c";
-	} else {
-		header.style.backgroundColor = "transparent";
-	}
+// fading effect on scrolling
+const faders = document.querySelectorAll(".fade-in");
+const sliders = document.querySelectorAll(".slide-in");
+const appearOptions = {
+	threshold: 0,
+	rootMargin: "0px 0px -500px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+	entries.forEach(entry => {
+		if (!entry.isIntersecting){
+			return;
+		} else {
+			entry.target.classList.add("appear");
+			appearOnScroll.unobserve(entry.target);
+		}
+	})
+}, 
+appearOptions);
+
+faders.forEach(fader => {
+	appearOnScroll.observe(fader);
+});
+
+sliders.forEach(slider => {
+	appearOnScroll.observe(slider);
 });
