@@ -49,7 +49,7 @@ p{
 /* fade in effect */
 .fade-in{
     opacity: 0;
-    transition: opacity 0.5s ease-in;
+    transition: opacity 1.0s ease-in;
 }
 .fade-in.appear{
     opacity: 1;
@@ -62,7 +62,7 @@ p{
 }
 .from-left, 
 .from-right{
-    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+    transition: opacity 1.0s ease-in, transform 1.0s ease-in;
     opacity: 0;
 }
 .from-left.appear, 
