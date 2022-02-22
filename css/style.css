@@ -49,11 +49,12 @@ p{
 /* fade in effect */
 .fade-in{
     opacity: 0;
-    transition: opacity 1.0s ease-in;
+    transition: opacity 0.5s ease-in;
 }
 .fade-in.appear{
     opacity: 1;
 }
+/* move in from the side effect using slide-in class name */
 .from-left{
     transform: translateX(-50%);
 }
@@ -62,7 +63,7 @@ p{
 }
 .from-left, 
 .from-right{
-    transition: opacity 1.0s ease-in, transform 1.0s ease-in;
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
     opacity: 0;
 }
 .from-left.appear, 
@@ -188,8 +189,7 @@ p{
     font-size: 15rem;
     letter-spacing: 50px;
     z-index: -1;
-    transition: 0.3s ease letter-spacing;
-    transition: 0.3s ease font-size;
+    transition: letter-spacing 1.0s ease, font-size 1.0s ease, transform 0.3s ease;
 }
 #header .nav-list ul li:hover a{
     color: var(--purple);
