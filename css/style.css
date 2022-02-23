@@ -328,6 +328,54 @@ p{
 #hero h1:nth-child(3) span{
     animation-delay: 3s;
 }
+
+
+
+
+/* dark mode toggle */
+.checkbox{
+	opacity: 0;
+	position: absolute;
+}
+#hero .label{
+	background-color: var(--black);
+	border-radius: 50px;
+    border: 2px solid var(--purple);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+    top: 50px;
+    left: 10px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+    transition: background-color 0.3s linear;
+}
+#hero .label .ball{
+	background-color: var(--purple);
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 18px;
+	width: 18px;
+	transform: translateX(0px);
+	transition: transform 0.3s linear;
+}
+#hero .checkbox:checked + .label .ball{
+	transform: translateX(24px);
+}
+#hero .checkbox:checked + .label{
+    background-color: var(--white);
+}
+
+
+
+
+
 /* end of hero section */
 
 /* about me section */
