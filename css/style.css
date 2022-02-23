@@ -45,6 +45,7 @@ p{
     font-weight: 300;
     letter-spacing: 0.05rem;
     line-height: 1.9rem;
+    text-align: left;
 }
 /* fade in effect */
 .fade-in{
@@ -743,7 +744,6 @@ p{
     #about .about-lower{
         width: 600px;
         height: 600px;
-        padding-left: 60px;
     }
     #about .about-lower .about-img::after{
         left: -45px;
@@ -848,3 +848,4 @@ p{
     }
 }
 /* end of larger screens */
+
