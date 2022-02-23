@@ -262,11 +262,8 @@ p{
     background-image: url(../images/Jamie_Portrait.jpg);
     background-size: cover;
     background-position: top center;
-
     /* clamp background to stop zooming too much */
     background-size: clamp(1200px, 80%, 2500px) auto;
-    /* background-repeat: no-repeat; */
-
     position: relative;
     z-index: 1;
 }
@@ -284,7 +281,6 @@ p{
 }
 /* positioning of welcome text */
 #hero .hero{
-    /* max-width: 1200px; */
     margin: 0 auto;
     justify-content: flex-start;
     padding: 0 10vw;
@@ -343,11 +339,11 @@ p{
     padding: 50px 0px;
 }
 #about .about-lower{
-    width: 250px;
-    height: 360px;
+    width: 400px;
+    height: 400px;
 }
-/* sets about image above the box effect*/
 #about .about-lower .about-img{
+    /* sets about image above the box effect*/
     position: relative;
     height: 100%;
     width: 100%;
@@ -365,6 +361,10 @@ p{
     border: 7px solid var(--purple);
     /* background: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(95,0,204,1) 100%); */
     z-index: -1;
+    transition: transform 2s ease;
+}
+#about .about-lower .about-img:hover::after{
+    transform: rotate(90deg);
 }
 #about .about-upper{
     width: 100%;
@@ -842,18 +842,20 @@ p{
     }
     #header .nav-list ul li a{
         font-size: 1.8rem;
+        transition: color 0.3s ease;   
     }
     /* remove background word effect */
     #header .nav-list ul a::after{
         display: none;
     }
     /* end of header section */
+    /* skills section */
     #skills .skills-flex .skills-flex-pair{
         flex-direction: row;
     }
     #skills-anchor{
         top: 100px;
     }
+    /* end of skills section */
 }
 /* end of larger screens */
-
