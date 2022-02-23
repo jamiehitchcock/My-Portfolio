@@ -1,4 +1,45 @@
-// selecting elements
+//dark mode toggle
+let darkMode = localStorage.getItem("darkMode");
+const darkModeToggle = document.querySelector("#dark-mode-toggle");
+
+// check if dark mode is enabled
+// if enabled then turn off
+// if its disabled then turn it on
+
+const enableDarkMode = () => {
+	// add class darkmode to the body
+	document.body.classList.add("darkmode");
+	// update darkMode in local storage
+	localStorage.setItem("darkMode", "enabled");
+};
+const disableDarkMode = () => {
+	// remove class darkmode to the body
+	document.body.classList.remove("darkmode");
+	// update darkMode in local storage
+	localStorage.setItem("darkMode", null);
+};
+
+// remember if dark mode is enableDarkMode. if so then activate it and move the toggler
+if (darkMode === "enabled") {
+	enableDarkMode();
+	darkModeToggle.checked = true;
+}
+
+// toggle dark mode upon clicking dark mode toggler
+darkModeToggle.addEventListener("click", () => {
+	darkMode = localStorage.getItem("darkMode");
+	if (darkMode !== "enabled"){
+		enableDarkMode();
+		console.log(darkMode);
+	} else {
+		disableDarkMode();
+		console.log(darkMode)
+	}
+});
+
+
+
+// hamburger
 const hamburger = document.querySelector(".header .nav-bar .nav-list .hamburger");
 const mobileMeunu = document.querySelector(".header .nav-bar .nav-list ul");
 const menuItem = document.querySelectorAll(".header .nav-bar .nav-list ul li a");
@@ -7,7 +48,7 @@ const menuItem = document.querySelectorAll(".header .nav-bar .nav-list ul li a")
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     mobileMeunu.classList.toggle("active");
-})
+});
 
 // toggle hamburger and mobile menu on clicking menu items
 menuItem.forEach((item) => {
