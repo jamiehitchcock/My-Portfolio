@@ -11,11 +11,13 @@
     --primary-clr: var(--black);
     --secondary-clr: var(--white);
     --alt-clr:var(--purple);
+    --filter: rgb(0,0,0,0.5);
   }
   .darkmode{
     --primary-clr: var(--white);
     --secondary-clr: var(--black);
     --alt-clr: var(--purple);
+    --filter: rgb(0,0,0,0);
   }
 html{
     font-size: 10px;
@@ -96,7 +98,7 @@ p{
 .cta{
     display: inline-block;
     padding: 10px 30px;
-    color: var(--white);
+    color: var(--secondary-clr);
     border: 2px solid var(--purple);
     /* border-radius: 20px; */
     background-color: transparent;
@@ -108,20 +110,19 @@ p{
     transition-property: background-color, color;
 }
 .cta:hover{
-    color: var(--white);
+    color: var(--secondary-clr);
     background-color: var(--purple);
     /* border: 2px solid white; */
 }
+/* header section */
 .brand h1 {
 	font-size: 3rem;
 	/* text-transform: uppercase; */
-	color: var(--white);
+	color: var(--secondary-clr);
 }
 .brand h1 span {
 	color: var(--purple);
 }
-
-/* header section */
 #header{
     position: fixed;
     z-index: 100;
@@ -142,9 +143,8 @@ p{
 
 #header .header{
     min-height: 5vh;
-    background-color: rgba(31, 30, 30, 0.25);
-    /* background-color: var(--black); */
-    transition: 0.3s ease background-color;
+    background-color: var(--primary-clr);
+    /* transition: 5.3s ease background-color; */
 }
 
 #header .nav-bar{
@@ -160,7 +160,7 @@ p{
 #header .nav-list ul{
     overflow: hidden;
     position: absolute;
-    background-color: rgba(0,0,0,1);
+    background-color: var(--primary-clr);
     width: 100vw;
     height: 100vh;
     /* set mobile nav as hidden offscreen */
@@ -170,6 +170,7 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    list-style: none;
     z-index: 1;
     /* make mobile nav appear smoothly */
     transition: 0.5s ease left;
@@ -185,7 +186,7 @@ p{
     text-transform: uppercase;
     padding: 20px;
     display: block;
-    color: var(--white);
+    color: var(--secondary-clr);
 }
 #header .nav-list ul a::after{
     /* takes the data after value set in a link in html, to display correct word*/
@@ -283,8 +284,7 @@ p{
     top: 0;
     height: 100%;
     width: 100%;
-    background-color:var(--black);
-    opacity: 0.6;
+    background-color: var(--filter);
     z-index: -1;
 }
 /* positioning of welcome text */
@@ -336,7 +336,6 @@ p{
 #hero h1:nth-child(3) span{
     animation-delay: 3s;
 }
-
 
 
 
@@ -394,6 +393,23 @@ p{
     margin: 0 auto;
     padding: 50px 0px;
 }
+#about .about-upper{
+    width: 100%;
+}
+#about .about-upper p{
+    /* color: black; */
+    color: var(--secondary-clr);
+    margin: 5px 60px;
+    line-height: 2.5rem;
+}
+#about .cta{
+    color: var(--secondary-clr);
+    margin-bottom: 50px;
+}
+#about .cta:hover{
+    color: var(--secondary-clr);
+    /* border: 2px solid white; */
+}
 #about .about-lower{
     width: 400px;
     height: 400px;
@@ -404,7 +420,7 @@ p{
     height: 100%;
     width: 100%;
     border: 10px solid;
-    border-color: var(--white);
+    border-color: var(--primary-clr);
 }
 /* box effect on about image*/
 #about .about-lower .about-img::after{
@@ -421,23 +437,6 @@ p{
 }
 #about .about-lower .about-img:hover::after{
     transform: rotate(90deg);
-}
-#about .about-upper{
-    width: 100%;
-}
-#about .about-upper p{
-    /* color: black; */
-    color: var(--secondary-clr);
-    margin: 5px 60px;
-    line-height: 2.5rem;
-}
-#about .cta{
-    color: var(--black);
-    margin-bottom: 50px;
-}
-#about .cta:hover{
-    color: var(--white);
-    /* border: 2px solid white; */
 }
 /* end of about me section */
 
@@ -773,7 +772,7 @@ p{
 }
 @keyframes text-reveal{
     100%{
-        color: var(--white);
+        color: var(--secondary-clr);
     }
 }
 @keyframes text-reveal-alt{

@@ -1,5 +1,7 @@
-//dark mode toggle
+//dark mode toggle that remembers setting
+// create variable for localStorage
 let darkMode = localStorage.getItem("darkMode");
+// select toggle button
 const darkModeToggle = document.querySelector("#dark-mode-toggle");
 
 // check if dark mode is enabled
@@ -30,13 +32,12 @@ darkModeToggle.addEventListener("click", () => {
 	darkMode = localStorage.getItem("darkMode");
 	if (darkMode !== "enabled"){
 		enableDarkMode();
-		console.log(darkMode);
+		// console.log(darkMode);
 	} else {
 		disableDarkMode();
-		console.log(darkMode)
+		// console.log(darkMode);
 	}
 });
-
 
 
 // hamburger
