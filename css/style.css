@@ -12,13 +12,27 @@
     --secondary-clr: var(--white);
     --alt-clr:var(--purple);
     --filter: rgb(0,0,0,0.35);
-  }
-  .darkmode{
+}
+  /* scrollbar theme */
+::-webkit-scrollbar{
+      width: 1.8em;
+}
+::-webkit-scrollbar-track{
+      background-color: var(--primary-clr);
+      margin-block: 0.5em;
+      border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--alt-clr);
+    border: 0.25em solid var(--primary-clr);
+    border-radius: 100vw;
+}
+.darkmode{
     --primary-clr: var(--white);
     --secondary-clr: var(--black);
     --alt-clr: var(--purple);
     --filter: rgb(0,0,0,0);
-  }
+}
 html{
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -146,6 +160,45 @@ p{
 }
 #header .brand h1 span {
 	color: var(--purple);
+}
+/* dark mode toggle */
+#header .checkbox{
+	opacity: 0;
+	position: absolute;
+}
+#header .label{
+	background-color: var(--black);
+	border-radius: 50px;
+    border: 2px solid var(--purple);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+    /* top: 50px;
+    left: 10px; */
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+    transition: background-color 0.3s linear;
+}
+#header .label .ball{
+	background-color: var(--purple);
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 18px;
+	width: 18px;
+	transform: translateX(0px);
+	transition: transform 0.3s linear;
+}
+#header .checkbox:checked + .label .ball{
+	transform: translateX(24px);
+}
+#header .checkbox:checked + .label{
+    background-color: var(--white);
 }
 #header .nav-list ul{
     overflow: hidden;
@@ -326,53 +379,6 @@ p{
 #hero h1:nth-child(3) span{
     animation-delay: 3s;
 }
-
-
-
-/* dark mode toggle */
-.checkbox{
-	opacity: 0;
-	position: absolute;
-}
-#header .label{
-	background-color: var(--black);
-	border-radius: 50px;
-    border: 2px solid var(--purple);
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 5px;
-    /* top: 50px;
-    left: 10px; */
-	position: relative;
-	height: 26px;
-	width: 50px;
-	transform: scale(1.5);
-    transition: background-color 0.3s linear;
-}
-#header .label .ball{
-	background-color: var(--purple);
-	border-radius: 50%;
-	position: absolute;
-	top: 2px;
-	left: 2px;
-	height: 18px;
-	width: 18px;
-	transform: translateX(0px);
-	transition: transform 0.3s linear;
-}
-#header .checkbox:checked + .label .ball{
-	transform: translateX(24px);
-}
-#header .checkbox:checked + .label{
-    background-color: var(--white);
-}
-
-
-
-
-
 /* end of hero section */
 
 /* about me section */
