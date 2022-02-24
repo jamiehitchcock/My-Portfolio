@@ -612,7 +612,7 @@ p{
     height: 100%;
     width: 100%;
     /* background-color: var(--black); */
-    background: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(95,0,204,1) 100%);
+    /* background: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(95,0,204,1) 100%); */
     opacity: 0.8;
 }
 /* apply zoom in hover effect on image */
@@ -904,6 +904,39 @@ p{
     #header .nav-list ul a::after{
         display: none;
     }
+    /* shift effect on hover */
+    #header .nav-list ul li a {
+    position:relative;
+    z-index: 1;
+    }
+     #header .nav-list ul li a:hover {
+    color: var(--secondary-clr);
+     }
+     #header .nav-list ul li a:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: var(--alt-clr);
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+    transition: all .5s;
+    }
+     #header .nav-list ul li a:hover:before {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+    }
+
+
     /* end of header section */
     /* skills section */
     #skills .skills-flex .skills-flex-pair{
