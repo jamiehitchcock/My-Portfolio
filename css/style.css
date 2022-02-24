@@ -11,7 +11,7 @@
     --primary-clr: var(--black);
     --secondary-clr: var(--white);
     --alt-clr:var(--purple);
-    --filter: rgb(0,0,0,0.5);
+    --filter: rgb(0,0,0,0.35);
   }
   .darkmode{
     --primary-clr: var(--white);
@@ -98,31 +98,24 @@ p{
 .cta{
     display: inline-block;
     padding: 10px 30px;
-    color: var(--secondary-clr);
+    color: var(--white);
     border: 2px solid var(--purple);
-    /* border-radius: 20px; */
+    border-radius: 20px;
     background-color: transparent;
     font-size: 2rem;
     /* text-transform: uppercase; */
     letter-spacing: 0.1rem;
     margin-top: 30px;
     transition: 0.3s ease;
-    transition-property: background-color, color;
+    transition-property: background-color;
 }
 .cta:hover{
-    color: var(--secondary-clr);
+    color: var(--white);
     background-color: var(--purple);
     /* border: 2px solid white; */
 }
 /* header section */
-.brand h1 {
-	font-size: 3rem;
-	/* text-transform: uppercase; */
-	color: var(--secondary-clr);
-}
-.brand h1 span {
-	color: var(--purple);
-}
+
 #header{
     position: fixed;
     z-index: 100;
@@ -131,20 +124,9 @@ p{
     width: 100vw;
     height: auto;
 }
-
-
-/* correct header to change color on scroll y position*/
-/* currently not changing colour but is recognising scroll  */
-
-
-
-
-
-
 #header .header{
     min-height: 5vh;
     background-color: var(--primary-clr);
-    /* transition: 5.3s ease background-color; */
 }
 
 #header .nav-bar{
@@ -156,6 +138,14 @@ p{
     /* max-width: 1300px; */
     max-width: 100vw;
     padding: 10px 30px;
+}
+#header .brand h1 {
+	font-size: 3rem;
+	/* text-transform: uppercase; */
+	color: var(--secondary-clr);
+}
+#header .brand h1 span {
+	color: var(--purple);
 }
 #header .nav-list ul{
     overflow: hidden;
@@ -344,7 +334,7 @@ p{
 	opacity: 0;
 	position: absolute;
 }
-#hero .label{
+#header .label{
 	background-color: var(--black);
 	border-radius: 50px;
     border: 2px solid var(--purple);
@@ -353,15 +343,15 @@ p{
 	align-items: center;
 	justify-content: space-between;
 	padding: 5px;
-    top: 50px;
-    left: 10px;
+    /* top: 50px;
+    left: 10px; */
 	position: relative;
 	height: 26px;
 	width: 50px;
 	transform: scale(1.5);
     transition: background-color 0.3s linear;
 }
-#hero .label .ball{
+#header .label .ball{
 	background-color: var(--purple);
 	border-radius: 50%;
 	position: absolute;
@@ -372,10 +362,10 @@ p{
 	transform: translateX(0px);
 	transition: transform 0.3s linear;
 }
-#hero .checkbox:checked + .label .ball{
+#header .checkbox:checked + .label .ball{
 	transform: translateX(24px);
 }
-#hero .checkbox:checked + .label{
+#header .checkbox:checked + .label{
     background-color: var(--white);
 }
 
@@ -716,18 +706,19 @@ p{
 
 /* footer section */
 #footer{
-    background: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(95,0,204,1) 100%);
+    /* background: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(95,0,204,1) 100%); */
+    background-color: var(--primary-clr);
 }
 #footer .footer{
     min-height: 150px;
     flex-direction: column;
 }
 #footer h1{
-    color: var(--white);
+    color: var(--secondary-clr);
     font-size: 3rem;
 }
 #footer h2{
-    color: var(--white);
+    color: var(--secondary-clr);
     font-weight: 500;
     font-size: 1.8rem
 }
@@ -772,7 +763,7 @@ p{
 }
 @keyframes text-reveal{
     100%{
-        color: var(--secondary-clr);
+        color: var(--white);
     }
 }
 @keyframes text-reveal-alt{
