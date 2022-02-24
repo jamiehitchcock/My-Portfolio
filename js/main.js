@@ -40,7 +40,7 @@ darkModeToggle.addEventListener("click", () => {
 });
 
 
-// hamburger
+// hamburger icon and menu for mobile and tablets
 const hamburger = document.querySelector(".header .nav-bar .nav-list .hamburger");
 const mobileMeunu = document.querySelector(".header .nav-bar .nav-list ul");
 const menuItem = document.querySelectorAll(".header .nav-bar .nav-list ul li a");
@@ -87,3 +87,21 @@ sliders.forEach(slider => {
 	appearOnScroll.observe(slider);
 });
 
+
+//function to generate and today at end of contact
+let setDay = () => {
+
+    //Arrays for converting numbers into day
+    const dayNames = [ "Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    //take day from Date Object
+    let calendar = new Date();
+	// take the day number from calendar and change that number to day word
+    let day = dayNames[calendar.getDay()];
+    
+    //Display the day variable
+    let today = `${day}`;
+    document.getElementById("this-day").innerText = today;
+};
+
+setDay();
