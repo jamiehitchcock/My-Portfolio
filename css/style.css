@@ -947,7 +947,7 @@ p{
     }
     #skills-anchor{
         /* top: 150px; */
-        /* top: 50px; */
+        top: -100px;
     }
     /* end of skills section */
 }
