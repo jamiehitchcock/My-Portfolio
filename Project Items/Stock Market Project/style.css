@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin-top: 30vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+h1{
+    font-size: 3rem;
+    margin: 0 50px;
+}
+#input, #btn{
+    font-size: 2rem;
+    margin: 50px 10px;
+    border: 5px solid black;
+    border-radius: 8px;
+    padding: 5px;
+}
+#input::placeholder{
+    text-align: center;
+    color: black;
+}
+#btn{
+    background-color: white;
+    cursor: pointer;
+}
+#output{
+    font-size: 3rem;
+}
+.green-day{
+    color: green;
+}
+.red-day{
+    color: red;
+}
