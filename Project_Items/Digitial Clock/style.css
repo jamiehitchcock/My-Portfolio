@@ -1,0 +1,33 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container{
+	height: 100vh;
+	width: 100%;
+  	font-size: 3rem;
+  	font-weight: 600;
+	display: flex;
+ 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+ 	background-color: black;
+	color: lime;
+}
+
+/* media queries for tablet */
+@media only screen and (min-width: 768px){
+	.container{
+		font-size: 4rem;
+	}
+  }
+  /* end of media queries for tablet */
+  
+  /* larger screens */
+  @media only screen and (min-width: 1350px){
+	.container{
+		font-size: 5rem;
+	}
+  }
+  /* end of larger screens */
