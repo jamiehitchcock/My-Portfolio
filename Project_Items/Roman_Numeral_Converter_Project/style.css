@@ -55,6 +55,9 @@ h1{
 
 /* larger screens */
 @media only screen and (min-width: 1350px){
+    .container{
+        margin-top: 10vh;
+    }
     h1{
         font-size: 5rem;
     }

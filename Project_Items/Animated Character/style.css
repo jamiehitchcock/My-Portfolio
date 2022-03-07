@@ -6,7 +6,7 @@ body {
   h1{
     text-align: center;
     margin: 10vh;
-    font-size: 4rem;
+    font-size: 3rem;
 }
   .sprite {
     position: absolute;
@@ -16,9 +16,30 @@ body {
     width: 1430px;
     background: url("images/spritesheet\ \(1\).png");
     animation: sprite 0.8s steps(21) infinite;
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.3);
   }
   @keyframes sprite {
     to { background-position: -30072px }
   }
  
+/* media queries for tablet */
+@media only screen and (min-width: 768px){
+  h1{
+    font-size: 3.5rem;
+}
+  .sprite {
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+}
+/* end of media queries for tablet */
+
+/* larger screens */
+@media only screen and (min-width: 1350px){
+  h1{
+    font-size: 4rem;
+}
+  .sprite {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+/* end of larger screens */
