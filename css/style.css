@@ -394,7 +394,6 @@ p{
     width: 100%;
 }
 #about .about-upper p{
-    /* color: black; */
     color: var(--secondary-clr);
     margin: 5px 60px;
     line-height: 2.5rem;
@@ -482,10 +481,8 @@ p{
     flex-basis: 60%;
     align-items: center;
     justify-content: center;
-    margin: 10px 5%;
+    margin: 20px;
     padding: 30px;
-    /* background-image: url();
-    background-size: cover; */
     border: 2px solid var(--purple);
     border-radius: 10px;
     box-shadow: 0px 0px 20px 0px var(--purple);
@@ -494,6 +491,7 @@ p{
     position: relative;
     z-index: 1;
     overflow: hidden;
+    min-width: 250px;
 }
 /* reduce box shadow on hover */
 #skills .skills-item:hover{
@@ -533,6 +531,12 @@ p{
 #skills .skills-item p{
     color: var(--white);
     text-align: left;
+}
+#skills .skills-item p .checked{
+    color: yellow;
+}
+#skills .skills-item p .blank{
+    color: white;
 }
 /* end of skills section */
 
@@ -821,7 +825,7 @@ p{
     /* skills section */
     #skills .skills-lower .skills-item{
         flex-basis: 45%;
-        margin: 2.5%;
+        margin: 20px;
     }
     #skills .skills-flex{
         flex-direction: row;
