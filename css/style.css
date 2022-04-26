@@ -961,5 +961,12 @@ p{
         top: -100px;
     }
     /* end of skills section */
+
+    /* start of contact section */
+    #contact .contact-item p{
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+    /* end of contact section */
 }
 /* end of larger screens */
