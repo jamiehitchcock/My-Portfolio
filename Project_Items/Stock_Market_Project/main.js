@@ -8,11 +8,9 @@ const apiToken = 'N9cbbcb2mG2PtsxzoKTbfAp7DY1HwBoCq5R8sy2O';
 async function getStockData(){
     // take symbol from the input field
     const symbol = document.getElementById("input").value;
-    console.log(`symbol is ${symbol}`);
 
     // declare the url using api link, symbol and token
     let apiUrl = "https://api.stockdata.org/v1/data/quote?symbols="+ symbol +"&api_token=" + apiToken;
-    console.log(`apiUrl is ${apiUrl}`);
     
     try{
         // return the fetched promise as json
@@ -28,20 +26,6 @@ async function getStockData(){
         let currency = stock["currency"];
         let previous = stock["previous_close_price"];
         let change = stock["day_change"];
-        let marketCap = stock["market_cap"];
-    
-        // show results in console log
-        console.log(data);
-        console.log(response);
-        console.log(data);
-        console.log(stock);
-        console.log(`name is ${name}`);
-        console.log(`ticker is ${ticker}`);
-        console.log(`exchange is ${exchange}`);
-        console.log(`price is ${price} ${currency}`);
-        console.log(`previous is ${previous} ${currency}`);
-        console.log(`change is ${change}`);
-        console.log(`market cap is ${marketCap}`);
 
         // results to be displayed
         const result = `
@@ -51,7 +35,6 @@ async function getStockData(){
         <p><b>Price:</b> <span id="price">${price}</span> ${currency}</p>
         <p><b>Previous price:</b> ${previous} ${currency}</p>
         <p><b>Change:</b> <span id="change">${change}%</span></p>
-        <p><b>Market Cap:</b> ${marketCap}</p>
         `;
 
         // display results in document
